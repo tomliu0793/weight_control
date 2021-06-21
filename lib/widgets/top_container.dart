@@ -6,7 +6,11 @@ class TopContainer extends StatelessWidget {
   final double width;
   final Widget child;
   final EdgeInsets padding;
-  TopContainer({this.height, this.width, this.child, this.padding});
+  TopContainer(
+      {this.height = 0,
+      this.width = 0,
+      required this.child,
+      required this.padding});
 
   @override
   Widget build(BuildContext context) {

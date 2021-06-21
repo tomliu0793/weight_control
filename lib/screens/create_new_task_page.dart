@@ -41,7 +41,10 @@ class CreateNewTaskPage extends StatelessWidget {
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      MyTextField(label: 'Title'),
+                      MyTextField(
+                        label: 'Title',
+                        icon: Icon(Icons.ac_unit),
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.end,
@@ -85,6 +88,7 @@ class CreateNewTaskPage extends StatelessWidget {
                   SizedBox(height: 20),
                   MyTextField(
                     label: 'Description',
+                    icon: Icon(Icons.ac_unit),
                     minLines: 3,
                     maxLines: 3,
                   ),

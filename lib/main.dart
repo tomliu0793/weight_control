@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/screens/home_page.dart';
+import '/screens/home.dart';
 import '/theme/colors/light_colors.dart';
 import 'package:flutter/services.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'weight control',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             displayColor: LightColors.kDarkBlue,
             fontFamily: 'Poppins'),
       ),
-      home: HomePage(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }

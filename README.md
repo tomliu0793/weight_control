@@ -42,3 +42,40 @@ https://dribbble.com/purrwebui
 # demo
 https://github.com/TheAlphaApp/flutter-task-planner-app.git
 https://github.com/alextekartik/flutter_app_example.git
+
+# 图表
+https://google.github.io/charts/flutter/gallery.html
+
+
+# 页面规划
+框架
+- APPbar
+  - easy 
+- body
+  - 3 page
+- bottom
+  - 3button
+
+1. home
+   1. person list +   
+      1. 横向
+      2. 带加号，可以新增
+   2. data list +
+      1. 选中人的最新基础数据，身高，体重，bmi，三围
+      2. 可以修改这个数据
+      3. 未来可以展示曲线
+   3. food list
+      1. 最近一天吃的食物列表，热量，热量总和
+   4. sport list
+      1. 最近一天运动列表，热量总和
+   5. 今天的热量统计
+2. tools
+   1. bmi
+      1. 输入身高，体重，计算BMI
+   2. kal-> weight
+      1. 文章
+3. zixun
+   1. food 文章
+   2. sport 文章
+   3. 减肥文章
+   4. 减肥达人

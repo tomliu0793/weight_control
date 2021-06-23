@@ -14,6 +14,13 @@ class BottomNavigationBarApp extends StatelessWidget {
         return (index == 1) ? Home() : Home();
       }),
     );
+    if (index == 0) {
+      Navigator.of(context).pushNamed('/home');
+    }
+    if (index == 1) {
+      Navigator.of(context).pushNamed('/calendarpage');
+    }
+    bottomNavigationBarIndex == index;
   }
 
   @override

@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
       radius: 25.0,
       backgroundColor: LightColors.kGreen,
       child: Icon(
-        Icons.calendar_today,
+        Icons.add,
         size: 20.0,
         color: Colors.white,
       ),
@@ -68,6 +68,55 @@ class HomePage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
+                    // Container(
+                    //   color: Colors.transparent,
+                    //   padding: EdgeInsets.symmetric(
+                    //       horizontal: 20.0, vertical: 10.0),
+                    //   child: Column(
+                    //     children: <Widget>[
+                    //       Row(
+                    //         crossAxisAlignment: CrossAxisAlignment.center,
+                    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //         children: <Widget>[
+                    //           subheading('My Tasks'),
+                    //           GestureDetector(
+                    //             onTap: () {
+                    //               Navigator.push(
+                    //                 context,
+                    //                 MaterialPageRoute(
+                    //                     builder: (context) => CalendarPage()),
+                    //               );
+                    //             },
+                    //             child: calendarIcon(),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //       SizedBox(height: 15.0),
+                    //       TaskColumn(
+                    //         icon: Icons.alarm,
+                    //         iconBackgroundColor: LightColors.kRed,
+                    //         title: 'To Do',
+                    //         subtitle: '5 tasks now. 1 started',
+                    //       ),
+                    //       SizedBox(
+                    //         height: 15.0,
+                    //       ),
+                    //       TaskColumn(
+                    //         icon: Icons.blur_circular,
+                    //         iconBackgroundColor: LightColors.kDarkYellow,
+                    //         title: 'In Progress',
+                    //         subtitle: '1 tasks now. 1 started',
+                    //       ),
+                    //       SizedBox(height: 15.0),
+                    //       TaskColumn(
+                    //         icon: Icons.check_circle_outline,
+                    //         iconBackgroundColor: LightColors.kBlue,
+                    //         title: 'Done',
+                    //         subtitle: '18 tasks now. 13 started',
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                     Container(
                       color: Colors.transparent,
                       padding: EdgeInsets.symmetric(
@@ -75,7 +124,23 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          subheading('today data'),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              subheading('Active Projects'),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CalendarPage()),
+                                  );
+                                },
+                                child: calendarIcon(),
+                              )
+                            ],
+                          ),
                           SizedBox(height: 5.0),
                           Row(
                             children: <Widget>[

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:weight_control/screens/person_page.dart';
 import '/screens/calendar_page.dart';
 import '/theme/colors/light_colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import '../widgets/task_column.dart';
 import '/widgets/active_project_card.dart';
 import '/widgets/top_container.dart';
+import './create_new_task_page.dart';
 
 class HomePage extends StatelessWidget {
   Text subheading(String title) {
@@ -42,7 +44,7 @@ class HomePage extends StatelessWidget {
               height: 200,
               width: width,
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: Column(
+              child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Padding(
@@ -55,13 +57,42 @@ class HomePage extends StatelessWidget {
                           CircleAvatar(
                             backgroundColor: LightColors.kBlue,
                             radius: 35.0,
-                            backgroundImage: AssetImage(
-                              'assets/images/avatar.png',
+                            child: Icon(
+                              Icons.tag_faces,
+                              size: 35.0,
+                              color: Colors.white,
                             ),
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 0, vertical: 0.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PersonPage()),
+                                );
+                              },
+                              child: CircleAvatar(
+                                backgroundColor: LightColors.kBlue,
+                                radius: 35.0,
+                                child: Icon(
+                                  Icons.add,
+                                  size: 35.0,
+                                  color: Colors.white,
+                                ),
+                              )),
+                        ],
+                      ),
+                    ),
                   ]),
             ),
             Expanded(
@@ -134,7 +165,8 @@ class HomePage extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => CalendarPage()),
+                                        builder: (context) =>
+                                            CreateNewTaskPage()),
                                   );
                                 },
                                 child: calendarIcon(),
